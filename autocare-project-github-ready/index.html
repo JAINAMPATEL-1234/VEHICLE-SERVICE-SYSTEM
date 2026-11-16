@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AutoCare Service Hub — Premium vehicle service management, live GPS tracking, OEM certified care, and digital workshop updates." />
+    <meta name="keywords" content="car service, vehicle tracking, auto repair, periodic maintenance, car detailing, brake service, Bengaluru, AutoCare" />
+    <meta name="theme-color" content="#07080c" />
+    <meta property="og:title" content="AutoCare Service Hub | Premium Car Care & Live Tracking" />
+    <meta property="og:description" content="Transparent automotive care, digital estimates, live progress tracking, and certified multi-point diagnostics." />
+    <meta property="og:type" content="website" />
+    <title>AutoCare Service Hub | Premium Car Care & Live Tracking</title>
+    
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Subtle background noise texture -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Live Toast Notification Region -->
+    <div class="toast-region" id="toastRegion" aria-live="polite" role="status"></div>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#home" data-route="home" aria-label="AutoCare Service Hub Home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>AUTO<span>CARE</span><small>SERVICE HUB</small></span>
+      </a>
+
+      <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <a href="#services" data-route="services">Services</a>
+        <a href="#track" data-route="track">Track vehicle</a>
+        <a href="#about" data-route="about">About</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions" id="headerActions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle contrast theme" title="Toggle Theme">◐</button>
+        <button class="text-btn" data-action="login">Sign in</button>
+        <button class="book-btn" data-action="booking">Book a service <span>↗</span></button>
+      </div>
+
+      <button class="menu-button" id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app" tabindex="-1" role="main"></main>
+
+    <!-- Global Footer -->
+    <footer id="siteFooter"></footer>
+
+    <!-- Interactive Modal Container -->
+    <div class="modal-backdrop" id="modalRoot" aria-hidden="true" role="dialog" aria-modal="true"></div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+  </body>
+</html>

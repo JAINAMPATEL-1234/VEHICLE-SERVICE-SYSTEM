@@ -1,0 +1,290 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum BookingStatus {
+  BOOKING_RECEIVED
+  APPOINTMENT_CONFIRMED
+  VEHICLE_RECEIVED
+  INSPECTION_STARTED
+  ESTIMATE_AWAITING_APPROVAL
+  WORK_IN_PROGRESS
+  WAITING_FOR_SPARE_PARTS
+  QUALITY_CHECK
+  READY_FOR_DELIVERY
+  COMPLETED
+  CANCELLED
+}
+
+enum EmailStatus {
+  QUEUED
+  SENT
+  FAILED
+}
+
+enum PaymentPreference {
+  PAY_AT_CENTER
+  CARD_OR_UPI
+}
+
+model Role {
+  id    String @id @default(cuid())
+  name  String @unique // CUSTOMER, EMPLOYEE, ADMIN
+  users User[]
+}
+
+model User {
+  id                  String   @id @default(cuid())
+  name                String
+  email               String   @unique
+  mobile              String?
+  passwordHash        String
+  emailVerifiedAt     DateTime?
+  employeeCode        String?  @unique
+  isActive            Boolean  @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  roleId              String
+  role                Role     @relation(fields: [roleId], references: [id])
+  vehicles            Vehicle[]
+  bookings            ServiceBooking[] @relation("CustomerBookings")
+  assignedJobs        EmployeeAssignment[]
+  authoredNotes       ServiceNote[]
+  verificationTokens  EmailVerificationToken[]
+  resetTokens         PasswordResetToken[]
+  emailLogs           EmailLog[]
+  notifications       Notification[]
+  auditActions        AuditLog[] @relation("AuditActor")
+}
+
+model EmailVerificationToken {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model CarCompany {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  models    CarModel[]
+  createdAt DateTime   @default(now())
+}
+
+model CarModel {
+  id              String    @id @default(cuid())
+  name            String
+  type            String
+  fuelType        String
+  transmission    String
+  seatingCapacity Int
+  engine          String
+  mileageOrRange  String
+  priceRange      String
+  description     String
+  serviceInterval String
+  imageUrl        String
+  companyId       String
+  company         CarCompany @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  vehicles        Vehicle[]
+  @@unique([companyId, name])
+}
+
+model Vehicle {
+  id                 String    @id @default(cuid())
+  registrationNumber String    @unique
+  vin                String?
+  year               Int
+  color              String?
+  mileage            Int?
+  fuelType           String?
+  customerId         String
+  carModelId         String
+  customer           User      @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  carModel           CarModel  @relation(fields: [carModelId], references: [id])
+  bookings           ServiceBooking[]
+  createdAt          DateTime  @default(now())
+}
+
+model ServiceType {
+  id                   String           @id @default(cuid())
+  name                 String           @unique
+  description          String
+  estimatedDurationMin Int
+  startingPrice        Decimal          @db.Decimal(10, 2)
+  included             String
+  frequency            String
+  isActive             Boolean          @default(true)
+  packages             ServicePackage[]
+  bookings             ServiceBooking[]
+}
+
+model ServicePackage {
+  id            String      @id @default(cuid())
+  name          String
+  description   String
+  price         Decimal     @db.Decimal(10, 2)
+  serviceTypeId String
+  serviceType   ServiceType @relation(fields: [serviceTypeId], references: [id], onDelete: Cascade)
+  bookings      ServiceBooking[]
+  @@unique([serviceTypeId, name])
+}
+
+model ServiceBooking {
+  id                 String          @id @default(cuid())
+  publicId           String          @unique
+  appointmentAt      DateTime
+  pickupDrop         Boolean         @default(false)
+  customerNotes      String?
+  paymentPreference  PaymentPreference @default(PAY_AT_CENTER)
+  status             BookingStatus   @default(BOOKING_RECEIVED)
+  priority           String          @default("NORMAL")
+  estimatedCompletionAt DateTime?
+  customerId         String
+  vehicleId          String
+  serviceTypeId      String
+  servicePackageId   String?
+  customer           User            @relation("CustomerBookings", fields: [customerId], references: [id])
+  vehicle            Vehicle         @relation(fields: [vehicleId], references: [id])
+  serviceType        ServiceType     @relation(fields: [serviceTypeId], references: [id])
+  servicePackage     ServicePackage? @relation(fields: [servicePackageId], references: [id])
+  statusHistory      BookingStatusHistory[]
+  assignments        EmployeeAssignment[]
+  checklists         ServiceChecklist[]
+  notes              ServiceNote[]
+  estimate           ServiceEstimate?
+  spareParts         SparePart[]
+  invoice            Invoice?
+  emailLogs          EmailLog[]
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+}
+
+model BookingStatusHistory {
+  id          String        @id @default(cuid())
+  status      BookingStatus
+  customerNote String?
+  internalNote String?
+  createdAt   DateTime      @default(now())
+  bookingId   String
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  changedById String?
+}
+
+model EmployeeAssignment {
+  id         String         @id @default(cuid())
+  bookingId  String
+  employeeId String
+  assignedAt DateTime       @default(now())
+  booking    ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  employee   User           @relation(fields: [employeeId], references: [id])
+  @@unique([bookingId, employeeId])
+}
+
+model ServiceChecklist {
+  id          String         @id @default(cuid())
+  label       String
+  isComplete  Boolean        @default(false)
+  bookingId   String
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model ServiceNote {
+  id          String         @id @default(cuid())
+  body        String
+  isCustomerVisible Boolean  @default(false)
+  bookingId   String
+  authorId    String
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  author      User           @relation(fields: [authorId], references: [id])
+  createdAt   DateTime       @default(now())
+}
+
+model ServiceEstimate {
+  id          String         @id @default(cuid())
+  laborCost   Decimal        @db.Decimal(10, 2)
+  partsCost   Decimal        @db.Decimal(10, 2)
+  tax         Decimal        @db.Decimal(10, 2)
+  total       Decimal        @db.Decimal(10, 2)
+  status      String         @default("DRAFT")
+  approvedAt  DateTime?
+  bookingId   String         @unique
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model SparePart {
+  id          String         @id @default(cuid())
+  name        String
+  sku         String?
+  quantity    Int            @default(1)
+  unitCost    Decimal        @db.Decimal(10, 2)
+  bookingId   String
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model Invoice {
+  id          String         @id @default(cuid())
+  invoiceNo   String         @unique
+  subtotal    Decimal        @db.Decimal(10, 2)
+  tax         Decimal        @db.Decimal(10, 2)
+  total       Decimal        @db.Decimal(10, 2)
+  issuedAt    DateTime       @default(now())
+  pdfUrl      String?
+  bookingId   String         @unique
+  booking     ServiceBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model EmailLog {
+  id          String         @id @default(cuid())
+  toEmail     String
+  template    String
+  subject     String
+  status      EmailStatus    @default(QUEUED)
+  providerId  String?
+  error       String?
+  createdAt   DateTime       @default(now())
+  userId      String?
+  bookingId   String?
+  user        User?          @relation(fields: [userId], references: [id])
+  booking     ServiceBooking? @relation(fields: [bookingId], references: [id])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  title     String
+  body      String
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  action    String
+  entity    String
+  entityId  String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+  actorId   String?
+  actor     User?    @relation("AuditActor", fields: [actorId], references: [id])
+}

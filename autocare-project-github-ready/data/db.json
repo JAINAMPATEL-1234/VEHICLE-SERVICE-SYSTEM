@@ -1,0 +1,1646 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "name": "Anika Kapoor",
+      "email": "admin@autocare.example",
+      "mobile": "+91 98888 10000",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "ADMIN",
+      "employeeCode": "AC-ADM-01",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_emp_1",
+      "name": "Arjun Mehta",
+      "email": "arjun@autocare.example",
+      "mobile": "+91 98888 10011",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "EMPLOYEE",
+      "employeeCode": "AC-EMP-01",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_emp_2",
+      "name": "Riya Shah",
+      "email": "riya@autocare.example",
+      "mobile": "+91 98888 10012",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "EMPLOYEE",
+      "employeeCode": "AC-EMP-02",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_emp_3",
+      "name": "Manav Kapoor",
+      "email": "manav@autocare.example",
+      "mobile": "+91 98888 10013",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "EMPLOYEE",
+      "employeeCode": "AC-EMP-03",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_cust_1",
+      "name": "Rhea Nair",
+      "email": "rhea@example.com",
+      "mobile": "+91 98888 10001",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "CUSTOMER",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_cust_2",
+      "name": "Kabir Rao",
+      "email": "kabir@example.com",
+      "mobile": "+91 98888 10002",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "CUSTOMER",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    },
+    {
+      "id": "usr_cust_3",
+      "name": "Kavya Arora",
+      "email": "kavya@example.com",
+      "mobile": "+91 98888 10003",
+      "passwordHash": "$2a$10$V1Xp/rlqxf6nvLEo0Yl8r.BsaGgK1hPMHZKw/NeFt72qzVHTnUzxC",
+      "role": "CUSTOMER",
+      "createdAt": "2026-11-15T12:58:07.941Z"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "veh_1",
+      "customerId": "usr_cust_1",
+      "brand": "Hyundai",
+      "model": "Creta",
+      "year": 2023,
+      "registration": "KA 01 MG 7412",
+      "color": "Titan Grey",
+      "fuel": "Petrol"
+    },
+    {
+      "id": "veh_2",
+      "customerId": "usr_cust_1",
+      "brand": "Tata Motors",
+      "model": "Nexon",
+      "year": 2022,
+      "registration": "KA 05 RS 2008",
+      "color": "Daytona Grey",
+      "fuel": "Diesel"
+    },
+    {
+      "id": "veh_3",
+      "customerId": "usr_cust_2",
+      "brand": "Honda",
+      "model": "City",
+      "year": 2024,
+      "registration": "KA 03 DN 4370",
+      "color": "Platinum White",
+      "fuel": "Petrol"
+    },
+    {
+      "id": "veh_4",
+      "customerId": "usr_cust_3",
+      "brand": "Toyota",
+      "model": "Fortuner",
+      "year": 2023,
+      "registration": "KA 04 KL 9901",
+      "color": "Super White",
+      "fuel": "Diesel"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "AC-2026-6647",
+      "customerId": "usr_cust_1",
+      "customerName": "Rhea Nair",
+      "customerEmail": "rhea@example.com",
+      "customerMobile": "+91 98888 10001",
+      "vehicle": "Tata Motors Nexon",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-11-16",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "COMPLETED",
+      "statusLabel": "Completed & Handed Over",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-11-16",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹2,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-11-15T13:59:23.188Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        },
+        {
+          "status": "COMPLETED",
+          "label": "Completed & Handed Over",
+          "time": "2026-11-15T14:06:04.840Z",
+          "note": "Service appointment booked via web portal."
+        }
+      ],
+      "createdAt": "2026-11-15T13:59:23.188Z"
+    },
+    {
+      "id": "AC-2026-6265",
+      "customerId": "usr_cust_1",
+      "customerName": "Rhea Nair",
+      "customerEmail": "rhea@example.com",
+      "customerMobile": "+91 98888 10001",
+      "vehicle": "Hyundai Creta",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 14,
+      "serviceName": "Emergency Roadside Assistance",
+      "appointmentAt": "2026-12-16",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "COMPLETED",
+      "statusLabel": "Completed & Handed Over",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-12-16",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹799",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-11-15T13:57:11.761Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        },
+        {
+          "status": "INSPECTION_STARTED",
+          "label": "Inspection Started",
+          "time": "2026-11-15T13:58:04.373Z",
+          "note": "Service appointment booked via web portal."
+        },
+        {
+          "status": "COMPLETED",
+          "label": "Completed & Handed Over",
+          "time": "2026-11-15T13:58:16.538Z",
+          "note": "Service appointment booked via web portal."
+        },
+        {
+          "status": "COMPLETED",
+          "label": "Completed & Handed Over",
+          "time": "2026-11-15T14:01:15.441Z",
+          "note": "Service appointment booked via web portal."
+        }
+      ],
+      "createdAt": "2026-11-15T13:57:11.761Z"
+    },
+    {
+      "id": "AC-2026-5909",
+      "customerId": "guest_1794750081565",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "brezza",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 3,
+      "serviceName": "AC Service & Repair",
+      "appointmentAt": "2026-11-16",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "INSPECTION_STARTED",
+      "statusLabel": "Inspection Started",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-11-16",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹1,899",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-11-15T13:41:21.565Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        },
+        {
+          "status": "INSPECTION_STARTED",
+          "label": "Inspection Started",
+          "time": "2026-11-15T13:42:55.039Z",
+          "note": "Service appointment booked via web portal."
+        }
+      ],
+      "createdAt": "2026-11-15T13:41:21.565Z"
+    },
+    {
+      "id": "AC-2026-4406",
+      "customerId": "guest_1794749941454",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "gt",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-11-16",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-11-16",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹2,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-11-15T13:39:01.454Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-11-15T13:39:01.454Z"
+    },
+    {
+      "id": "AC-2026-6291",
+      "customerId": "guest_1794749879757",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "Hyundai Creta",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 8,
+      "serviceName": "Car Wash & Detailing",
+      "appointmentAt": "2026-11-16",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-11-16",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹1,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-11-15T13:37:59.758Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-11-15T13:37:59.758Z"
+    },
+    {
+      "id": "AC-2026-9554",
+      "customerId": "guest_1793024601984",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "bmw m340i",
+      "registration": "GJ 01 MG 8055",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-10-27",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-27",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "sarkhi krje dofa !",
+      "cost": "₹2,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T14:23:21.985Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-10-26T14:23:21.986Z"
+    },
+    {
+      "id": "AC-2026-9325",
+      "customerId": "guest_1793023441425",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "Hyundai Creta",
+      "registration": "GJ 01 MG 7412",
+      "serviceId": 9,
+      "serviceName": "Dent & Paint Repair",
+      "appointmentAt": "2026-10-27",
+      "slot": "02:00–04:00 PM (Afternoon)",
+      "pickupDrop": true,
+      "paymentPreference": "Card / UPI at completion",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-27",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹2,999",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T14:04:01.425Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-10-26T14:04:01.425Z"
+    },
+    {
+      "id": "AC-2026-6442",
+      "customerId": "guest_1793023165463",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "Honda City ZX",
+      "registration": "KA 05 MN 9988",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-10-30",
+      "slot": "09:00-11:00 AM",
+      "pickupDrop": true,
+      "paymentPreference": "PAY_AT_WORKSHOP",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-30",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Periodic service with brake check",
+      "cost": "₹2,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T13:59:25.463Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-10-26T13:59:25.463Z"
+    },
+    {
+      "id": "AC-2026-5443",
+      "customerId": "guest_1793022160814",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "Hyundai Creta",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-10-27",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": false,
+      "paymentPreference": "Pay at service center",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-27",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹2,499",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T13:42:40.814Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-10-26T13:42:40.814Z"
+    },
+    {
+      "id": "AC-2026-9222",
+      "customerId": "guest_1793021989203",
+      "customerName": "Valued Customer",
+      "customerEmail": "customer@example.com",
+      "customerMobile": "",
+      "vehicle": "Toyota Glanza",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 4,
+      "serviceName": "Brake Inspection & Repair",
+      "appointmentAt": "2026-10-27",
+      "slot": "09:00–11:00 AM (Morning)",
+      "pickupDrop": true,
+      "paymentPreference": "Pay at service center",
+      "status": "BOOKING_RECEIVED",
+      "statusLabel": "Booking Received",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-27",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Service appointment booked via web portal.",
+      "cost": "₹1,299",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T13:39:49.205Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        }
+      ],
+      "createdAt": "2026-10-26T13:39:49.205Z"
+    },
+    {
+      "id": "AC-2026-6884",
+      "customerId": "usr_cust_1",
+      "customerName": "Rhea Nair",
+      "customerEmail": "rhea@example.com",
+      "customerMobile": "+91 98888 10001",
+      "vehicle": "Tata Nexon EV",
+      "registration": "KA 05 EV 9988",
+      "serviceId": 15,
+      "serviceName": "EV Inspection & Maintenance",
+      "appointmentAt": "2026-10-30T10:00:00+05:30",
+      "slot": "11:00-01:00 PM",
+      "pickupDrop": true,
+      "paymentPreference": "Card / UPI at completion",
+      "status": "QUALITY_CHECK",
+      "statusLabel": "Quality Check & Calibration",
+      "priority": "Normal",
+      "estimatedCompletion": "2026-10-30T10:00:00+05:30",
+      "employeeId": "usr_emp_2",
+      "employeeName": "Riya Shah",
+      "notes": "High voltage insulation resistance passed at 550 mega-ohms. Road testing regenerative braking.",
+      "cost": "₹2,999",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T13:28:52.126Z",
+          "note": "Appointment request received and queued for service bay allocation."
+        },
+        {
+          "status": "QUALITY_CHECK",
+          "label": "Quality Check & Calibration",
+          "time": "2026-10-26T13:28:52.198Z",
+          "note": "High voltage insulation resistance passed at 550 mega-ohms. Road testing regenerative braking."
+        }
+      ],
+      "createdAt": "2026-10-26T13:28:52.126Z"
+    },
+    {
+      "id": "AC-2026-0816",
+      "customerId": "usr_cust_1",
+      "customerName": "Rhea Nair",
+      "customerEmail": "rhea@example.com",
+      "customerMobile": "+91 98888 10001",
+      "vehicle": "Hyundai Creta",
+      "registration": "KA 01 MG 7412",
+      "serviceId": 1,
+      "serviceName": "General / Periodic Service",
+      "appointmentAt": "2026-10-27T10:30:00+05:30",
+      "slot": "10:30 AM",
+      "pickupDrop": true,
+      "paymentPreference": "Pay at service center",
+      "status": "WORK_IN_PROGRESS",
+      "statusLabel": "Work In Progress",
+      "priority": "High",
+      "estimatedCompletion": "2026-10-27T17:30:00+05:30",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Initial 42-point inspection completed. Engine oil drained and genuine synthetic oil refilled. Front brake pad wear at 40% — replacement recommended and awaiting confirmation.",
+      "cost": "₹5,480",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T09:14:00+05:30",
+          "note": "Appointment requested via web portal."
+        },
+        {
+          "status": "APPOINTMENT_CONFIRMED",
+          "label": "Appointment Confirmed",
+          "time": "2026-10-26T10:02:00+05:30",
+          "note": "Service bay #3 reserved at AutoCare Koramangala."
+        },
+        {
+          "status": "VEHICLE_RECEIVED",
+          "label": "Vehicle Received",
+          "time": "2026-10-26T10:27:00+05:30",
+          "note": "Vehicle received and 360-degree condition photos documented."
+        },
+        {
+          "status": "INSPECTION_STARTED",
+          "label": "Inspection Started",
+          "time": "2026-10-26T11:03:00+05:30",
+          "note": "Senior advisor Arjun Mehta initiated 42-point digital diagnostics."
+        },
+        {
+          "status": "WORK_IN_PROGRESS",
+          "label": "Work In Progress",
+          "time": "2026-10-26T13:18:00+05:30",
+          "note": "Engine oil flush and OEM filter installation in progress."
+        }
+      ],
+      "createdAt": "2026-10-26T09:14:00+05:30"
+    },
+    {
+      "id": "AC-2026-0812",
+      "customerId": "usr_cust_1",
+      "customerName": "Rhea Nair",
+      "customerEmail": "rhea@example.com",
+      "customerMobile": "+91 98888 10001",
+      "vehicle": "Tata Nexon",
+      "registration": "KA 05 RS 2008",
+      "serviceId": 3,
+      "serviceName": "AC Service & Repair",
+      "appointmentAt": "2026-10-25T14:00:00+05:30",
+      "slot": "02:00 PM",
+      "pickupDrop": false,
+      "paymentPreference": "Card / UPI at completion",
+      "status": "READY_FOR_DELIVERY",
+      "statusLabel": "Ready for Delivery",
+      "priority": "Medium",
+      "estimatedCompletion": "2026-10-26T15:00:00+05:30",
+      "employeeId": "usr_emp_2",
+      "employeeName": "Riya Shah",
+      "notes": "Cabin cooling restored to 6.2°C. New pollen air filter installed. Car washed and ready for customer pickup.",
+      "cost": "₹3,290",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-24T14:00:00+05:30",
+          "note": "Online booking confirmed."
+        },
+        {
+          "status": "VEHICLE_RECEIVED",
+          "label": "Vehicle Received",
+          "time": "2026-10-25T14:10:00+05:30",
+          "note": "Vehicle inspected and checked in."
+        },
+        {
+          "status": "WORK_IN_PROGRESS",
+          "label": "Work In Progress",
+          "time": "2026-10-25T15:00:00+05:30",
+          "note": "Coolant flush & compressor leak test."
+        },
+        {
+          "status": "QUALITY_CHECK",
+          "label": "Quality Check",
+          "time": "2026-10-26T11:00:00+05:30",
+          "note": "Digital thermometer verification passed."
+        },
+        {
+          "status": "READY_FOR_DELIVERY",
+          "label": "Ready for Delivery",
+          "time": "2026-10-26T13:45:00+05:30",
+          "note": "Complimentary wash completed."
+        }
+      ],
+      "createdAt": "2026-10-24T14:00:00+05:30"
+    },
+    {
+      "id": "AC-2026-0805",
+      "customerId": "usr_cust_2",
+      "customerName": "Kabir Rao",
+      "customerEmail": "kabir@example.com",
+      "customerMobile": "+91 98888 10002",
+      "vehicle": "Honda City",
+      "registration": "KA 03 DN 4370",
+      "serviceId": 6,
+      "serviceName": "Wheel Alignment & Balancing",
+      "appointmentAt": "2026-10-22T09:00:00+05:30",
+      "slot": "09:00 AM",
+      "pickupDrop": false,
+      "paymentPreference": "Card / UPI at completion",
+      "status": "COMPLETED",
+      "statusLabel": "Completed",
+      "priority": "Low",
+      "estimatedCompletion": "2026-10-22T11:30:00+05:30",
+      "employeeId": "usr_emp_1",
+      "employeeName": "Arjun Mehta",
+      "notes": "Laser alignment report provided to customer. High-speed road test showed zero steering drift.",
+      "cost": "₹1,099",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-21T18:00:00+05:30",
+          "note": "Appointment scheduled."
+        },
+        {
+          "status": "WORK_IN_PROGRESS",
+          "label": "Work In Progress",
+          "time": "2026-10-22T09:20:00+05:30",
+          "note": "3D alignment and wheel balancing done."
+        },
+        {
+          "status": "COMPLETED",
+          "label": "Completed",
+          "time": "2026-10-22T11:15:00+05:30",
+          "note": "Payment processed and invoice generated."
+        }
+      ],
+      "createdAt": "2026-10-21T18:00:00+05:30"
+    },
+    {
+      "id": "AC-2026-0820",
+      "customerId": "usr_cust_3",
+      "customerName": "Kavya Arora",
+      "customerEmail": "kavya@example.com",
+      "customerMobile": "+91 98888 10003",
+      "vehicle": "Toyota Fortuner",
+      "registration": "KA 04 KL 9901",
+      "serviceId": 4,
+      "serviceName": "Brake Inspection & Repair",
+      "appointmentAt": "2026-10-28T11:00:00+05:30",
+      "slot": "11:00 AM",
+      "pickupDrop": true,
+      "paymentPreference": "Pay at service center",
+      "status": "APPOINTMENT_CONFIRMED",
+      "statusLabel": "Appointment Confirmed",
+      "priority": "Medium",
+      "estimatedCompletion": "2026-10-28T16:00:00+05:30",
+      "employeeId": "usr_emp_3",
+      "employeeName": "Manav Kapoor",
+      "notes": "Customer reported slight squeaking during morning stops. Assigned for disc inspection.",
+      "cost": "₹1,299",
+      "history": [
+        {
+          "status": "BOOKING_RECEIVED",
+          "label": "Booking Received",
+          "time": "2026-10-26T14:30:00+05:30",
+          "note": "Online reservation submitted."
+        },
+        {
+          "status": "APPOINTMENT_CONFIRMED",
+          "label": "Appointment Confirmed",
+          "time": "2026-10-26T15:10:00+05:30",
+          "note": "Service technician assigned."
+        }
+      ],
+      "createdAt": "2026-10-26T14:30:00+05:30"
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Toyota",
+      "model": "Glanza",
+      "type": "Hatchback",
+      "fuel": "Petrol / CNG",
+      "transmission": "Manual / AMT",
+      "seats": 5,
+      "engine": "1.2L DualJet Dual VVT",
+      "mileage": "22.35–30.61 km/kg",
+      "price": "₹6.86–10.00L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sleek premium hatchback offering dynamic performance, outstanding fuel economy, and 360-degree camera assistance.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 2,
+      "brand": "Toyota",
+      "model": "Urban Cruiser Hyryder",
+      "type": "SUV",
+      "fuel": "Petrol / Strong Hybrid",
+      "transmission": "Manual / e-Drive",
+      "seats": 5,
+      "engine": "1.5L TNGA Atkinson Cycle",
+      "mileage": "27.97 km/l",
+      "price": "₹11.14–20.19L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Self-charging hybrid SUV delivering quiet electric city drives, panoramic sunroof, and AWD option for rugged terrains.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 3,
+      "brand": "Toyota",
+      "model": "Innova Crysta",
+      "type": "MPV",
+      "fuel": "Diesel",
+      "transmission": "5-Speed Manual",
+      "seats": 7,
+      "engine": "2.4L GD Turbo Diesel",
+      "mileage": "15.6 km/l",
+      "price": "₹19.99–26.30L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Legendary long-distance people mover with unrivaled reliability, plush captain seats, and robust ladder-frame chassis.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 4,
+      "brand": "Toyota",
+      "model": "Fortuner",
+      "type": "SUV",
+      "fuel": "Diesel / Petrol",
+      "transmission": "Manual / 6-Speed Auto",
+      "seats": 7,
+      "engine": "2.8L Turbo Diesel (500Nm)",
+      "mileage": "10.5–14.4 km/l",
+      "price": "₹36.05–52.34L",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "description": "Commanding full-size 4x4 SUV with high-torque drivetrain, auto-limited slip differential, and tough terrain prowess.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 5,
+      "brand": "Toyota",
+      "model": "Camry",
+      "type": "Sedan",
+      "fuel": "Strong Hybrid",
+      "transmission": "e-CVT with Paddle Shifters",
+      "seats": 5,
+      "engine": "2.5L Dynamic Force Hybrid",
+      "mileage": "25.49 km/l",
+      "price": "₹48.00L",
+      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Luxury executive sedan blending silent hybrid cruising with reclined rear executive seating and Mark Levinson audio.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 6,
+      "brand": "Hyundai",
+      "model": "Grand i10 Nios",
+      "type": "Hatchback",
+      "fuel": "Petrol / CNG",
+      "transmission": "Manual / Smart AMT",
+      "seats": 5,
+      "engine": "1.2L Kappa 4-Cylinder",
+      "mileage": "20.7–27.0 km/kg",
+      "price": "₹5.98–8.62L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Agile city hatchback packed with 8-inch infotainment, wireless phone charging, and 6 standard airbags.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 7,
+      "brand": "Hyundai",
+      "model": "i20",
+      "type": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual / IVT",
+      "seats": 5,
+      "engine": "1.2L Kappa VVT",
+      "mileage": "16.0–20.0 km/l",
+      "price": "₹7.51–11.21L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sharp, European-inspired premium hatchback boasting Bose premium sound, electric sunroof, and ambient illumination.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 8,
+      "brand": "Hyundai",
+      "model": "Verna",
+      "type": "Sedan",
+      "fuel": "Turbo Petrol / Petrol",
+      "transmission": "Manual / 7-Speed DCT",
+      "seats": 5,
+      "engine": "1.5L Turbo GDi (160PS)",
+      "mileage": "18.6–20.6 km/l",
+      "price": "₹10.69–16.98L",
+      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Futuristic fastback silhouette with dual integrated panoramic screens, ventilated front seats, and Level 2 ADAS.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 9,
+      "brand": "Hyundai",
+      "model": "Creta",
+      "type": "SUV",
+      "fuel": "Petrol / Turbo / Diesel",
+      "transmission": "Manual / IVT / AT / DCT",
+      "seats": 5,
+      "engine": "1.5L Turbo / 1.5L CRDi",
+      "mileage": "17.4–21.8 km/l",
+      "price": "₹11.11–20.50L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "India’s favorite midsize SUV, featuring voice-enabled panoramic sunroof, dual-zone climate, and 70+ safety features.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 10,
+      "brand": "Hyundai",
+      "model": "Alcazar",
+      "type": "SUV",
+      "fuel": "Turbo Petrol / Diesel",
+      "transmission": "Manual / 7-DCT / 6-AT",
+      "seats": 7,
+      "engine": "1.5L Turbo GDi (160PS)",
+      "mileage": "17.5–20.4 km/l",
+      "price": "₹14.99–21.70L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Refined 3-row family SUV with second-row wireless charging, captain seat armrests, and 8-way power driver seat.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 11,
+      "brand": "Maruti Suzuki",
+      "model": "Swift",
+      "type": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual / AMT",
+      "seats": 5,
+      "engine": "1.2L Z-Series 3-Cylinder",
+      "mileage": "24.8–25.75 km/l",
+      "price": "₹6.49–9.64L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sporty iconic hatchback with ultra-responsive chassis tuning, 9-inch SmartPlay Pro+ screen, and 6 airbags standard.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 12,
+      "brand": "Maruti Suzuki",
+      "model": "Dzire",
+      "type": "Sedan",
+      "fuel": "Petrol / CNG",
+      "transmission": "Manual / AMT",
+      "seats": 5,
+      "engine": "1.2L Z-Series DOHC",
+      "mileage": "25.71–33.73 km/kg",
+      "price": "₹6.84–10.19L",
+      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "description": "India’s top compact sedan engineered for comfortable family travel, unmatched fuel efficiency, and 5-star GNCAP safety.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 13,
+      "brand": "Maruti Suzuki",
+      "model": "Baleno",
+      "type": "Hatchback",
+      "fuel": "Petrol / CNG",
+      "transmission": "Manual / AGS",
+      "seats": 5,
+      "engine": "1.2L DualJet Dual VVT",
+      "mileage": "22.35–30.61 km/kg",
+      "price": "₹6.66–9.88L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Spacious wide-body hatch equipped with Heads Up Display (HUD), UV cut glass, and surround vision cameras.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 14,
+      "brand": "Maruti Suzuki",
+      "model": "Grand Vitara",
+      "type": "SUV",
+      "fuel": "Mild / Strong Hybrid",
+      "transmission": "Manual / AT / e-CVT",
+      "seats": 5,
+      "engine": "1.5L Intelligent Hybrid / K15C",
+      "mileage": "21.1–27.97 km/l",
+      "price": "₹11.42–20.68L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Bold lifestyle SUV featuring AllGrip Select 4WD, full-electric drive mode in traffic, and double-slide panoramic glass.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 15,
+      "brand": "Maruti Suzuki",
+      "model": "Jimny",
+      "type": "SUV",
+      "fuel": "Petrol",
+      "transmission": "5-Speed MT / 4-Speed AT",
+      "seats": 4,
+      "engine": "1.5L K15B AllGrip Pro 4x4",
+      "mileage": "16.39–16.94 km/l",
+      "price": "₹12.76–14.96L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Authentic ladder-frame offroader with low-range transfer gearbox, rigid axle suspension, and heritage trail capability.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 16,
+      "brand": "Tata Motors",
+      "model": "Tiago",
+      "type": "Hatchback",
+      "fuel": "Petrol / CNG / EV",
+      "transmission": "Manual / AMT",
+      "seats": 5,
+      "engine": "1.2L Revotron 3-Cylinder",
+      "mileage": "19.0–26.49 km/kg",
+      "price": "₹4.99–8.95L",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+      "description": "Robust 4-star safety rated compact hatchback with Harman infotainment, dual-cylinder iCNG technology, and corner stability.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 17,
+      "brand": "Tata Motors",
+      "model": "Punch",
+      "type": "SUV",
+      "fuel": "Petrol / CNG / EV",
+      "transmission": "Manual / AMT",
+      "seats": 5,
+      "engine": "1.2L Revotron with DynaPro",
+      "mileage": "18.8–26.99 km/kg",
+      "price": "₹6.13–10.20L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Rugged sub-compact SUV with 187mm ground clearance, 370mm water wading capacity, and 5-star adult safety certification.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 18,
+      "brand": "Tata Motors",
+      "model": "Nexon",
+      "type": "SUV",
+      "fuel": "Petrol / Diesel / EV",
+      "transmission": "Manual / DCA / AMT",
+      "seats": 5,
+      "engine": "1.2L Turbo Petrol / 1.5L Diesel",
+      "mileage": "17.4–24.0 km/l",
+      "price": "₹8.15–15.80L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Market-leading compact SUV featuring bi-functional LED headlamps, 10.25-inch touchscreen navigation, and ventilated seats.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 19,
+      "brand": "Tata Motors",
+      "model": "Harrier",
+      "type": "SUV",
+      "fuel": "Diesel",
+      "transmission": "6-Speed MT / 6-Speed AT",
+      "seats": 5,
+      "engine": "2.0L Kryotec Turbo Diesel (170PS)",
+      "mileage": "14.6–16.8 km/l",
+      "price": "₹14.99–26.44L",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "description": "Land Rover D8 platform derived flagship SUV with terrain response modes, panoramic skyroof, and ADAS suite.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 20,
+      "brand": "Tata Motors",
+      "model": "Safari",
+      "type": "SUV",
+      "fuel": "Diesel",
+      "transmission": "6-Speed MT / 6-Speed AT",
+      "seats": 7,
+      "engine": "2.0L Kryotec Turbo (350Nm)",
+      "mileage": "14.5–16.3 km/l",
+      "price": "₹15.50–27.34L",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "description": "Imposing 3-row SUV with ventilated first & second row seats, gesture controlled powered tailgate, and 19-inch alloys.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 21,
+      "brand": "Honda",
+      "model": "Amaze",
+      "type": "Sedan",
+      "fuel": "Petrol",
+      "transmission": "Manual / CVT",
+      "seats": 5,
+      "engine": "1.2L i-VTEC 4-Cylinder",
+      "mileage": "18.6–19.5 km/l",
+      "price": "₹8.10–11.20L",
+      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Refined family sedan delivering smooth CVT automatic drive, 420L boot capacity, and advanced crash protection.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 22,
+      "brand": "Honda",
+      "model": "City",
+      "type": "Sedan",
+      "fuel": "Petrol / e:HEV Hybrid",
+      "transmission": "6-Speed MT / CVT / e-CVT",
+      "seats": 5,
+      "engine": "1.5L i-VTEC / 1.5L Atkinson Hybrid",
+      "mileage": "18.4–27.1 km/l",
+      "price": "₹11.82–20.75L",
+      "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "description": "The benchmark mid-size sedan with Honda Sensing ADAS, lane-watch camera, one-touch electric sunroof, and plush leather upholstery.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 23,
+      "brand": "Honda",
+      "model": "Elevate",
+      "type": "SUV",
+      "fuel": "Petrol",
+      "transmission": "6-Speed MT / 7-Speed CVT",
+      "seats": 5,
+      "engine": "1.5L DOHC i-VTEC",
+      "mileage": "15.3–16.9 km/l",
+      "price": "₹11.91–16.73L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "High-stance midsize SUV offering 220mm ground clearance, class-leading 458L boot, and commanding driver visibility.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 24,
+      "brand": "Honda",
+      "model": "Civic",
+      "type": "Sedan",
+      "fuel": "Petrol / Hybrid",
+      "transmission": "CVT / e-CVT",
+      "seats": 5,
+      "engine": "2.0L e:HEV Direct Injection",
+      "mileage": "21.0 km/l",
+      "price": "₹22.50–28.00L",
+      "image": "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=80",
+      "description": "Aerodynamic sport sedan with low center of gravity, multi-link rear suspension, and thrilling handling dynamics.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 25,
+      "brand": "Honda",
+      "model": "WR-V",
+      "type": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Manual / CVT",
+      "seats": 5,
+      "engine": "1.5L i-VTEC High Output",
+      "mileage": "16.5 km/l",
+      "price": "₹10.50–14.20L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Urban crossover combining spacious cabin ergonomics, roof rails, high approach angles, and durable underbody cladding.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 26,
+      "brand": "Kia",
+      "model": "Sonet",
+      "type": "SUV",
+      "fuel": "Petrol / Turbo / Diesel",
+      "transmission": "Manual / iMT / 6-AT / 7-DCT",
+      "seats": 5,
+      "engine": "1.0L Turbo GDi / 1.5L CRDi",
+      "mileage": "18.2–22.3 km/l",
+      "price": "₹8.00–15.70L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Feature-rich compact SUV equipped with front ventilated seats, LED sound mood lighting, and Level 1 ADAS safety.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 27,
+      "brand": "Kia",
+      "model": "Seltos",
+      "type": "SUV",
+      "fuel": "Petrol / Turbo / Diesel",
+      "transmission": "Manual / IVT / 6-AT / 7-DCT",
+      "seats": 5,
+      "engine": "1.5L Turbo GDi (160PS)",
+      "mileage": "17.0–20.7 km/l",
+      "price": "₹11.19–20.56L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Striking SUV with dual panoramic 10.25-inch displays, Level 2 ADAS with 17 autonomous features, and 8-way powered seat.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 28,
+      "brand": "Kia",
+      "model": "Carens",
+      "type": "MPV",
+      "fuel": "Petrol / Turbo / Diesel",
+      "transmission": "Manual / iMT / 6-AT / 7-DCT",
+      "seats": 7,
+      "engine": "1.5L Turbo GDi / 1.5L CRDi",
+      "mileage": "15.7–21.3 km/l",
+      "price": "₹10.60–19.70L",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Versatile 6 or 7 seater with one-touch electric tumble second row seats, roof-mounted AC vents for all rows, and 6 airbags standard.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 29,
+      "brand": "Kia",
+      "model": "Carnival",
+      "type": "MPV",
+      "fuel": "Diesel",
+      "transmission": "8-Speed Automatic",
+      "seats": 7,
+      "engine": "2.2L Smartstream CRDi (440Nm)",
+      "mileage": "14.85 km/l",
+      "price": "₹63.90L",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ultra-luxurious limousine with VIP lounge relaxation seats, dual electric sunroofs, and dual 12.3-inch curved screens.",
+      "interval": "Every 10,000 km / 12 months"
+    },
+    {
+      "id": 30,
+      "brand": "Kia",
+      "model": "EV6",
+      "type": "EV",
+      "fuel": "Electric",
+      "transmission": "Automatic Single-Speed",
+      "seats": 5,
+      "engine": "Dual Motor AWD (325PS, 605Nm)",
+      "mileage": "708 km ARAI range",
+      "price": "₹65.97L",
+      "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80",
+      "description": "Award-winning 800V ultra-fast charging electric crossover accelerating 0-100 km/h in 5.2 seconds with vehicle-to-load power.",
+      "interval": "Every 15,000 km / 12 months"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "General / Periodic Service",
+      "icon": "wrench",
+      "frequency": "Every 10,000 km / 12 months",
+      "price": "₹2,499",
+      "rawPrice": 2499,
+      "duration": "2–3 hours",
+      "description": "Comprehensive 42-point digital inspection, engine oil check, fluid top-ups, spark plug clean, filter inspection, and tire condition assessment.",
+      "includes": [
+        "Engine oil level & quality test",
+        "Coolant, brake fluid & washer top-up",
+        "Air filter & AC filter clean",
+        "42-point digital safety diagnosis",
+        "Underbody & suspension check"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Engine Oil & Filter Change",
+      "icon": "droplet",
+      "frequency": "Every 8,000–10,000 km",
+      "price": "₹1,699",
+      "rawPrice": 1699,
+      "duration": "45–60 min",
+      "description": "Complete engine flush, OEM-grade synthetic oil replacement, brand-new oil filter installation, and drain-plug washer renewal.",
+      "includes": [
+        "Full synthetic engine oil replacement",
+        "New OEM-grade oil filter",
+        "Drain plug seal replacement",
+        "Engine bay dry-cleaning & visual leak check"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "AC Service & Repair",
+      "icon": "snowflake",
+      "frequency": "Every 12 months",
+      "price": "₹1,899",
+      "rawPrice": 1899,
+      "duration": "90–120 min",
+      "description": "Complete climate control overhaul: condenser washing, refrigerant gas pressure top-up, blower clean, and hospital-grade antimicrobial disinfection.",
+      "includes": [
+        "AC gas pressure check & refrigerant top-up",
+        "Condenser coil high-pressure wash",
+        "Cabin filter cleaning / replacement",
+        "Anti-bacterial ozone cabin fumigation"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Brake Inspection & Repair",
+      "icon": "disc",
+      "frequency": "Every 10,000 km",
+      "price": "₹1,299",
+      "rawPrice": 1299,
+      "duration": "60–90 min",
+      "description": "Four-wheel caliper inspection, brake pad thickness measurement, rotor disc inspection, caliper pin greasing, and hydraulic brake fluid bleed.",
+      "includes": [
+        "Front & rear brake pad thickness measurement",
+        "Brake disc rotor runout assessment",
+        "Caliper slider pin lubrication",
+        "Emergency handbrake cable adjustment"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Battery Check & Replacement",
+      "icon": "zap",
+      "frequency": "Every 6 months",
+      "price": "₹499",
+      "rawPrice": 499,
+      "duration": "30 min",
+      "description": "High-rate discharge load test, alternator voltage output calibration, terminal anti-corrosion treatment, and electrolyte specific gravity check.",
+      "includes": [
+        "Digital cranking amp load testing",
+        "Alternator charging rate diagnosis",
+        "Terminal wire decarbonization & petroleum jelly seal",
+        "Free doorstep battery replacement quote"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Wheel Alignment & Balancing",
+      "icon": "crosshair",
+      "frequency": "Every 8,000 km",
+      "price": "₹899",
+      "rawPrice": 899,
+      "duration": "45–60 min",
+      "description": "Precision computer-assisted 3D four-wheel alignment, high-speed computerized dynamic balancing, and zinc weight installation.",
+      "includes": [
+        "3D laser caster, camber & toe calibration",
+        "High-speed wheel vibration balancing",
+        "Tread wear unevenness diagnostic",
+        "Steering center position realignment"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Tyre Rotation & Replacement",
+      "icon": "circle",
+      "frequency": "Every 8,000 km",
+      "price": "₹699",
+      "rawPrice": 699,
+      "duration": "45 min",
+      "description": "Scientific 5-tyre cross rotation, digital tread depth measurement, bead inspection, and nitrogen pressure calibration for longer tyre life.",
+      "includes": [
+        "5-wheel cross rotation pattern execution",
+        "Digital tread depth measurement in mm",
+        "Rim inspection for bends or cracks",
+        "Nitrogen tire inflation to exact OEM psi"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Car Wash & Detailing",
+      "icon": "sparkles",
+      "frequency": "Every 1–3 months",
+      "price": "₹1,499",
+      "rawPrice": 1499,
+      "duration": "2 hours",
+      "description": "Snow foam pH-neutral exterior shampoo, interior vacuuming, dashboard UV conditioning, tyre dressing, and streak-free glass polish.",
+      "includes": [
+        "Two-bucket wash with high-pressure snow foam",
+        "Deep interior upholstery vacuuming",
+        "Mat shampooing & footwell cleaning",
+        "Dashboard & door card matte conditioning",
+        "Crystal-clear windshield ceramic coat"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Dent & Paint Repair",
+      "icon": "shield",
+      "frequency": "As needed",
+      "price": "₹2,999",
+      "rawPrice": 2999,
+      "duration": "1–2 days",
+      "description": "Computerized paint shade matching, infrared heated paint booth bake, spot dent pulling, and 3-stage rotary gloss polish.",
+      "includes": [
+        "Precision computerized paint spectrometer match",
+        "Heated dust-free paint booth application",
+        "3-year anti-peel paint warranty",
+        "3-stage rubbing and machine polish finish"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Clutch & Transmission Service",
+      "icon": "git-commit",
+      "frequency": "Every 40,000 km",
+      "price": "₹3,499",
+      "rawPrice": 3499,
+      "duration": "3–4 hours",
+      "description": "Transmission fluid flush, clutch plate wear assessment, release bearing inspection, flywheel check, and smooth-gearshift calibration.",
+      "includes": [
+        "Transmission gear oil drain & flush",
+        "Clutch pedal free play and hydraulic bleed",
+        "Flywheel and pressure plate inspection",
+        "Gear linkage lubrication"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Suspension Service",
+      "icon": "activity",
+      "frequency": "Every 25,000 km",
+      "price": "₹2,499",
+      "rawPrice": 2499,
+      "duration": "2–3 hours",
+      "description": "Shock absorber rebound testing, stabilizer link and ball joint check, strut mount replacement, and control arm bushing inspection.",
+      "includes": [
+        "Front & rear strut leak inspection",
+        "Suspension bushing wear analysis",
+        "Link rod and ball joint play diagnosis",
+        "Dynamic road test over bumpy surfaces"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Electrical Diagnostics",
+      "icon": "cpu",
+      "frequency": "As needed",
+      "price": "₹999",
+      "rawPrice": 999,
+      "duration": "45–60 min",
+      "description": "Full OBD-II onboard ECU scanner diagnostic, sensor voltage testing, error code clearing, wiring loom inspection, and fuse box audit.",
+      "includes": [
+        "Universal OBD-II engine and transmission fault scan",
+        "Real-time live sensor data logging",
+        "DTC error code reset with explanation report",
+        "Lighting and relay continuity check"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Insurance Inspection",
+      "icon": "file-text",
+      "frequency": "At claim time",
+      "price": "₹0 (Free with claim)",
+      "rawPrice": 0,
+      "duration": "1–2 hours",
+      "description": "Cashless claim liaison with all major insurers, comprehensive photographic damage documentation, and itemized surveyor estimate preparation.",
+      "includes": [
+        "Detailed high-res damage photography",
+        "OEM parts price estimate generation",
+        "Direct liaison with insurance surveyor",
+        "Cashless garage settlement processing"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Emergency Roadside Assistance",
+      "icon": "truck",
+      "frequency": "24/7 On Demand",
+      "price": "₹799",
+      "rawPrice": 799,
+      "duration": "30–45 min arrival",
+      "description": "Rapid emergency response team for flat tyres, battery jump-starts, emergency fuel delivery, lock-out assistance, or flatbed towing.",
+      "includes": [
+        "24/7 dedicated dispatch hotline",
+        "Hydraulic flatbed towing coordination",
+        "On-spot jump start with heavy-duty booster",
+        "Emergency puncture plug and inflation"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "EV Inspection & Maintenance",
+      "icon": "battery-charging",
+      "frequency": "Every 10,000 km / 12 months",
+      "price": "₹2,999",
+      "rawPrice": 2999,
+      "duration": "2 hours",
+      "description": "High-voltage insulation resistance check, battery management system (BMS) cell balancing, coolant loop check, and regenerative brake test.",
+      "includes": [
+        "High-voltage wiring safety inspection",
+        "BMS battery state-of-health (SoH) diagnostics",
+        "Thermal management coolant loop test",
+        "Regenerative braking calibration"
+      ]
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "msg_1793026018504",
+      "name": "Sanjay Sharma",
+      "email": "sanjay@example.com",
+      "topic": "General Service Inquiry",
+      "message": "I want to inquire about periodic service for my Toyota Fortuner.",
+      "status": "NEW",
+      "createdAt": "2026-10-26T14:46:58.504Z"
+    },
+    {
+      "id": "msg_1793021332475",
+      "name": "Aarav Patel",
+      "email": "aarav@example.com",
+      "topic": "General Service Inquiry",
+      "message": "Interested in periodic maintenance for Toyota Hyryder Hybrid.",
+      "status": "NEW",
+      "createdAt": "2026-10-26T13:28:52.475Z"
+    },
+    {
+      "id": "msg_1",
+      "name": "Sunil Verma",
+      "email": "sunil.v@example.com",
+      "topic": "Service enquiry",
+      "message": "Looking for a comprehensive 40,000km service for my 2021 Hyundai Creta Diesel. Do you offer synthetic oil and brake pad replacement packages?",
+      "status": "NEW",
+      "createdAt": "2026-10-26T11:20:00+05:30"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1794751564840_966",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-6647 changed to Completed & Handed Over",
+      "time": "2026-11-15T14:06:04.840Z"
+    },
+    {
+      "id": "log_1794751545357_506",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Arjun Mehta [EMPLOYEE]",
+      "time": "2026-11-15T14:05:45.357Z"
+    },
+    {
+      "id": "log_1794751511230_40",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-11-15T14:05:11.230Z"
+    },
+    {
+      "id": "log_1794751386744_145",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-11-15T14:03:06.744Z"
+    },
+    {
+      "id": "log_1794751281488_905",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-11-15T14:01:21.488Z"
+    },
+    {
+      "id": "log_1794751275441_65",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-6265 changed to Completed & Handed Over",
+      "time": "2026-11-15T14:01:15.441Z"
+    },
+    {
+      "id": "log_1794751208377_173",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Anika Kapoor [ADMIN]",
+      "time": "2026-11-15T14:00:08.377Z"
+    },
+    {
+      "id": "log_1794751163188_844",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-6647 created for Tata Motors Nexon (Rhea Nair)",
+      "time": "2026-11-15T13:59:23.188Z"
+    },
+    {
+      "id": "log_1794751105744_54",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-11-15T13:58:25.744Z"
+    },
+    {
+      "id": "log_1794751096538_639",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-6265 changed to Completed & Handed Over",
+      "time": "2026-11-15T13:58:16.538Z"
+    },
+    {
+      "id": "log_1794751084373_327",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-6265 changed to Inspection Started",
+      "time": "2026-11-15T13:58:04.373Z"
+    },
+    {
+      "id": "log_1794751042579_362",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Arjun Mehta [EMPLOYEE]",
+      "time": "2026-11-15T13:57:22.579Z"
+    },
+    {
+      "id": "log_1794751031762_574",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-6265 created for Hyundai Creta (Rhea Nair)",
+      "time": "2026-11-15T13:57:11.762Z"
+    },
+    {
+      "id": "log_1794750989115_536",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-11-15T13:56:29.117Z"
+    },
+    {
+      "id": "log_1794750175039_734",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-5909 changed to Inspection Started",
+      "time": "2026-11-15T13:42:55.039Z"
+    },
+    {
+      "id": "log_1794750162506_544",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Arjun Mehta [EMPLOYEE]",
+      "time": "2026-11-15T13:42:42.506Z"
+    },
+    {
+      "id": "log_1794750117662_286",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Anika Kapoor [ADMIN]",
+      "time": "2026-11-15T13:41:57.662Z"
+    },
+    {
+      "id": "log_1794750081566_306",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-5909 created for brezza (Valued Customer)",
+      "time": "2026-11-15T13:41:21.566Z"
+    },
+    {
+      "id": "log_1794749941454_185",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-4406 created for gt (Valued Customer)",
+      "time": "2026-11-15T13:39:01.454Z"
+    },
+    {
+      "id": "log_1794749879758_497",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-6291 created for Hyundai Creta (Valued Customer)",
+      "time": "2026-11-15T13:37:59.758Z"
+    },
+    {
+      "id": "log_1793026018504_901",
+      "action": "CONTACT_MESSAGE",
+      "details": "New inquiry from Sanjay Sharma regarding General Service Inquiry",
+      "time": "2026-10-26T14:46:58.504Z"
+    },
+    {
+      "id": "log_1793024601987_827",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-9554 created for bmw m340i (Valued Customer)",
+      "time": "2026-10-26T14:23:21.987Z"
+    },
+    {
+      "id": "log_1793023441425_679",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-9325 created for Hyundai Creta (Valued Customer)",
+      "time": "2026-10-26T14:04:01.425Z"
+    },
+    {
+      "id": "log_1793023165464_413",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-6442 created for Honda City ZX (Valued Customer)",
+      "time": "2026-10-26T13:59:25.464Z"
+    },
+    {
+      "id": "log_1793022160814_253",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-5443 created for Hyundai Creta (Valued Customer)",
+      "time": "2026-10-26T13:42:40.814Z"
+    },
+    {
+      "id": "log_1793021989206_279",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-9222 created for Toyota Glanza (Valued Customer)",
+      "time": "2026-10-26T13:39:49.206Z"
+    },
+    {
+      "id": "log_1793021530458_962",
+      "action": "ASSIGNMENT_UPDATE",
+      "details": "Assigned Riya Shah to booking AC-2026-6884",
+      "time": "2026-10-26T13:32:10.458Z"
+    },
+    {
+      "id": "log_1793021530406_871",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Anika Kapoor [ADMIN]",
+      "time": "2026-10-26T13:32:10.406Z"
+    },
+    {
+      "id": "log_1793021332475_183",
+      "action": "CONTACT_MESSAGE",
+      "details": "New inquiry from Aarav Patel regarding General Service Inquiry",
+      "time": "2026-10-26T13:28:52.475Z"
+    },
+    {
+      "id": "log_1793021332198_950",
+      "action": "STATUS_UPDATE",
+      "details": "Booking AC-2026-6884 changed to Quality Check & Calibration",
+      "time": "2026-10-26T13:28:52.198Z"
+    },
+    {
+      "id": "log_1793021332195_718",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Arjun Mehta [EMPLOYEE]",
+      "time": "2026-10-26T13:28:52.195Z"
+    },
+    {
+      "id": "log_1793021332126_796",
+      "action": "BOOKING_CREATED",
+      "details": "New booking AC-2026-6884 created for Tata Nexon EV (Rhea Nair)",
+      "time": "2026-10-26T13:28:52.126Z"
+    },
+    {
+      "id": "log_1793021332076_484",
+      "action": "USER_LOGIN",
+      "details": "User signed in: Rhea Nair [CUSTOMER]",
+      "time": "2026-10-26T13:28:52.076Z"
+    },
+    {
+      "id": "log_1",
+      "action": "STATUS_UPDATE",
+      "details": "Arjun Mehta updated AC-2026-0816 to WORK_IN_PROGRESS",
+      "time": "2026-10-26T13:18:00+05:30"
+    },
+    {
+      "id": "log_2",
+      "action": "DELIVERY_READY",
+      "details": "Riya Shah updated AC-2026-0812 to READY_FOR_DELIVERY",
+      "time": "2026-10-26T13:45:00+05:30"
+    },
+    {
+      "id": "log_3",
+      "action": "BOOKING_CREATED",
+      "details": "Kavya Arora created booking AC-2026-0820 for Toyota Fortuner",
+      "time": "2026-10-26T14:30:00+05:30"
+    },
+    {
+      "id": "log_4",
+      "action": "ASSIGNMENT_UPDATE",
+      "details": "Anika Kapoor assigned Manav Kapoor to AC-2026-0820",
+      "time": "2026-10-26T15:10:00+05:30"
+    }
+  ]
+}
